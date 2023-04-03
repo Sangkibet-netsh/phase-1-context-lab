@@ -43,3 +43,8 @@ function createEmployeeRecords(testEmployee){
 }
     
 
+// this function adds a timeIn event Object to an employee's record of timeInEvents when provided an employee record and Date/Time String and returns the updated record
+function createTimeInEvent(dateStamp){
+    this.timeInEvents.push(createTimeInEvent(dateStamp,"TimeIn"))
+    return this
+}
