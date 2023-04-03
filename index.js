@@ -92,3 +92,10 @@ function wagesEarnedOnDate (dateWorked) {
     let wages = hoursWorkedOnDate.call(this, dateWorked) * this.payPerHour;
     return parseFloat(wages.toString());
 }
+
+
+function findEmployeeByFirstName (employeeArray, firstName) {
+    return employeeArray.find(function(record){
+      return record.firstName === firstName
+    })
+}
