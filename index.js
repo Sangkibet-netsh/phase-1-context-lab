@@ -73,7 +73,7 @@ function createTimeOutEvent (dateStamp){
     return this
 }
 
-//hoursWorkedOnDate calculates the hours worked when given an employee record and a date
+//hoursWorkedOnDate calculates the hours worked when given an employee record and a date,calculates employee worked 2hrs
 function hoursWorkedOnDate (particularDateWorked) {
     let timeInEvent = this.timeInEvents.find(function (event) {
         return event.date === particularDateWorked
@@ -84,4 +84,11 @@ function hoursWorkedOnDate (particularDateWorked) {
     })
 
     return (timeOutEvent.hour - timeInEvent.hour) / 100;
+}
+
+
+//
+function wagesEarnedOnDate (dateWorked) {
+    let wages = hoursWorkedOnDate.call(this, dateWorked) * this.payPerHour;
+    return parseFloat(wages.toString());
 }
