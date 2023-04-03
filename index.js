@@ -43,8 +43,21 @@ function createEmployeeRecords(testEmployee){
 }
     
 
-// this function adds a timeIn event Object to an employee's record of timeInEvents when provided an employee record and Date/Time String and returns the updated record
-function createTimeInEvent(dateStamp){
-    this.timeInEvents.push(createTimeInEvent(dateStamp,"TimeIn"))
+//  function adds a timeIn event Object to an employee's record of timeInEvents when provided an employee record and Date/Time String and returns the updated record
+// function createTimeInEvent(dateStamp){
+//     this.timeInEvents.push(createTimeInEvent(dateStamp,"TimeIn"))
+//     return this
+// }
+
+function createTimeInEvent (dateStamp) {
+    let [date, hour] = dateStamp.split(" ");
+
+    this.timeInEvents.push({
+        type: "TimeIn",
+        hour: parseInt(hour, 10),
+        date,
+    })
+    
     return this
 }
+
