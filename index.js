@@ -38,7 +38,8 @@ function createEmployeeRecord(testEmployee)
 
 //create function Employee records that process an Array of Arrays into an Array of employee records
 
-function createEmployeeRecords(employeeRecords){
+function createEmployeeRecords(testEmployee){
+    return testEmployee.map(employee => createEmployeeRecord(employee))
+}
     
 
-}
