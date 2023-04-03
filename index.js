@@ -99,3 +99,9 @@ function findEmployeeByFirstName (employeeArray, firstName) {
       return record.firstName === firstName
     })
 }
+
+function calculatePayroll (employeeRecordsArray) {
+    return employeeRecordsArray.reduce(function (memo, records) {
+        return memo + allWagesFor.call(records);
+    }, 0)
+}
