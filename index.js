@@ -22,16 +22,23 @@ const allWagesFor = function () {
 }
 
 
-//let testEmployee = createEmployeeRecord(["Gray", "Worm", "Security", 1])
-function createEmployeeRecord(array)
+let testEmployee = createEmployeeRecord(["Gray", "Worm", "Security", 1])
+function createEmployeeRecord(testEmployee)
 {
     return{
-        firstName: array[0],
-        familyName: array[1],
-        title: array[2],
-        payPerHour: array[3],
+        firstName: testEmployee[0],
+        familyName: testEmployee[1],
+        title: testEmployee[2],
+        payPerHour: testEmployee[3],
         timeInEvents: [],
         timeOutEvents: []
 
     }
+}
+
+//create function Employee records that process an Array of Arrays into an Array of employee records
+
+function createEmployeeRecords(employeeRecords){
+    
+
 }
