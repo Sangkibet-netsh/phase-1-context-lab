@@ -21,3 +21,17 @@ const allWagesFor = function () {
     return payable
 }
 
+
+//let testEmployee = createEmployeeRecord(["Gray", "Worm", "Security", 1])
+function createEmployeeRecord(array)
+{
+    return{
+        firstName: array[0],
+        familyName: array[1],
+        title: array[2],
+        payPerHour: array[3],
+        timeInEvents: [],
+        timeOutEvents: []
+
+    }
+}
